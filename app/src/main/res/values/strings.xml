@@ -19,4 +19,5 @@
     <string name="btn_raiz_cuadrada">Root</string>
     <string name="btn_inverso">Inv</string>
     <string name="btn_igual">=</string>
+    <string name="btn_borrar">AC</string>
 </resources>

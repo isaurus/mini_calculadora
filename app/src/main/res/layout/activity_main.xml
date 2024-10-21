@@ -11,14 +11,17 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtResultado"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="0"
         android:layout_columnSpan="5"
-        android:layout_gravity="end"
-        android:layout_marginBottom="30dp"
-        android:text="TextView"
-        android:textSize="30sp" />
+        android:layout_marginBottom="40dp"
+        android:fontFamily="monospace"
+        android:text="0.0"
+        android:textAlignment="viewEnd"
+        android:textSize="40sp" />
 
     <Button
         android:id="@+id/btnUno"
@@ -28,7 +31,9 @@
         android:layout_column="0"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:text="@string/btn_uno" />
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="@string/btn_uno"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnDos"
@@ -38,7 +43,9 @@
         android:layout_column="1"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:text="@string/btn_dos" />
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="@string/btn_dos"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnTres"
@@ -48,7 +55,9 @@
         android:layout_column="2"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:text="@string/btn_tres" />
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="@string/btn_tres"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnCuatro"
@@ -58,7 +67,9 @@
         android:layout_column="0"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:text="@string/btn_cuatro" />
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="@string/btn_cuatro"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnCinco"
@@ -68,7 +79,9 @@
         android:layout_column="1"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:text="@string/btn_cinco" />
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="@string/btn_cinco"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnSeis"
@@ -78,7 +91,9 @@
         android:layout_column="2"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:text="@string/btn_seis" />
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="@string/btn_seis"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnSiete"
@@ -88,7 +103,9 @@
         android:layout_column="0"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:text="@string/btn_siete" />
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="@string/btn_siete"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnOcho"
@@ -98,7 +115,9 @@
         android:layout_column="1"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:text="@string/btn_ocho" />
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="@string/btn_ocho"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnNueve"
@@ -108,7 +127,9 @@
         android:layout_column="2"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:text="@string/btn_nueve" />
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="@string/btn_nueve"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnCero"
@@ -116,9 +137,11 @@
         android:layout_height="65dp"
         android:layout_row="4"
         android:layout_column="0"
-        android:layout_gravity="center"
+        android:layout_gravity="center|top"
         android:layout_margin="5dp"
-        android:text="@string/btn_cero" />
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="@string/btn_cero"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnPunto"
@@ -126,9 +149,11 @@
         android:layout_height="65dp"
         android:layout_row="4"
         android:layout_column="1"
-        android:layout_gravity="center"
+        android:layout_gravity="center|top"
         android:layout_margin="5dp"
-        android:text="@string/btn_punto" />
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="@string/btn_punto"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnConmutar"
@@ -136,10 +161,12 @@
         android:layout_height="65dp"
         android:layout_row="4"
         android:layout_column="2"
-        android:layout_gravity="center"
+        android:layout_gravity="center|top"
         android:layout_margin="5dp"
+        android:backgroundTint="@android:color/holo_green_dark"
         android:text="@string/boton_conmutar"
-        android:textSize="7sp"
+        android:textSize="15sp"
+        android:textStyle="bold"
         app:cornerRadius="5dp" />
 
     <Button
@@ -150,7 +177,9 @@
         android:layout_column="3"
         android:layout_gravity="center"
         android:layout_margin="3dp"
+        android:backgroundTint="@android:color/holo_green_dark"
         android:text="@string/btn_sumar"
+        android:textStyle="bold"
         app:cornerRadius="5dp" />
 
     <Button
@@ -161,7 +190,9 @@
         android:layout_column="4"
         android:layout_gravity="center"
         android:layout_margin="3dp"
+        android:backgroundTint="@android:color/holo_green_dark"
         android:text="@string/btn_restar"
+        android:textStyle="bold"
         app:cornerRadius="5dp" />
 
     <Button
@@ -172,7 +203,9 @@
         android:layout_column="3"
         android:layout_gravity="center"
         android:layout_margin="3dp"
+        android:backgroundTint="@android:color/holo_green_dark"
         android:text="@string/btn_multiplicar"
+        android:textStyle="bold"
         app:cornerRadius="5dp" />
 
     <Button
@@ -183,7 +216,9 @@
         android:layout_column="4"
         android:layout_gravity="center"
         android:layout_margin="3dp"
+        android:backgroundTint="@android:color/holo_green_dark"
         android:text="@string/btn_dividir"
+        android:textStyle="bold"
         app:cornerRadius="5dp" />
 
     <Button
@@ -193,9 +228,12 @@
         android:layout_row="3"
         android:layout_rowSpan="2"
         android:layout_column="3"
+        android:layout_gravity="fill"
         android:layout_margin="3dp"
+        android:backgroundTint="@color/design_default_color_primary_dark"
         android:text="@string/btn_raiz_cuadrada"
-        android:textSize="3sp"
+        android:textSize="13sp"
+        android:textStyle="bold"
         app:cornerRadius="5dp" />
 
     <Button
@@ -205,9 +243,36 @@
         android:layout_row="3"
         android:layout_rowSpan="2"
         android:layout_column="4"
+        android:layout_gravity="fill"
         android:layout_margin="3dp"
+        android:backgroundTint="@color/design_default_color_primary_dark"
         android:text="@string/btn_inverso"
-        android:textSize="3sp"
+        android:textSize="13sp"
+        android:textStyle="bold"
         app:cornerRadius="5dp" />
+
+    <Button
+        android:id="@+id/btnIgual"
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="0"
+        android:layout_columnSpan="3"
+        android:layout_gravity="center|top"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="@string/btn_igual"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnBorrar"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="3"
+        android:layout_columnSpan="2"
+        android:layout_gravity="center|top"
+        android:backgroundTint="@color/design_default_color_error"
+        android:text="@string/btn_borrar"
+        android:textStyle="bold" />
 
 </GridLayout>
