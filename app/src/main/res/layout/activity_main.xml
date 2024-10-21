@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="5"
+    android:padding="20dp"
+    android:rowCount="6"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="5"
+        android:layout_gravity="end"
+        android:layout_marginBottom="30dp"
+        android:text="TextView"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btnUno"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="@string/btn_uno" />
+
+    <Button
+        android:id="@+id/btnDos"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="@string/btn_dos" />
+
+    <Button
+        android:id="@+id/btnTres"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_row="1"
+        android:layout_column="2"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="@string/btn_tres" />
+
+    <Button
+        android:id="@+id/btnCuatro"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="@string/btn_cuatro" />
+
+    <Button
+        android:id="@+id/btnCinco"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="@string/btn_cinco" />
+
+    <Button
+        android:id="@+id/btnSeis"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_row="2"
+        android:layout_column="2"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="@string/btn_seis" />
+
+    <Button
+        android:id="@+id/btnSiete"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="@string/btn_siete" />
+
+    <Button
+        android:id="@+id/btnOcho"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="@string/btn_ocho" />
+
+    <Button
+        android:id="@+id/btnNueve"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_row="3"
+        android:layout_column="2"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="@string/btn_nueve" />
+
+    <Button
+        android:id="@+id/btnCero"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="@string/btn_cero" />
+
+    <Button
+        android:id="@+id/btnPunto"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="@string/btn_punto" />
+
+    <Button
+        android:id="@+id/btnConmutar"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_row="4"
+        android:layout_column="2"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="@string/boton_conmutar"
+        android:textSize="7sp"
+        app:cornerRadius="5dp" />
+
+    <Button
+        android:id="@+id/btnSumar"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_row="1"
+        android:layout_column="3"
+        android:layout_gravity="center"
+        android:layout_margin="3dp"
+        android:text="@string/btn_sumar"
+        app:cornerRadius="5dp" />
+
+    <Button
+        android:id="@+id/btnRestar"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_row="1"
+        android:layout_column="4"
+        android:layout_gravity="center"
+        android:layout_margin="3dp"
+        android:text="@string/btn_restar"
+        app:cornerRadius="5dp" />
+
+    <Button
+        android:id="@+id/btnMultiplicar"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_row="2"
+        android:layout_column="3"
+        android:layout_gravity="center"
+        android:layout_margin="3dp"
+        android:text="@string/btn_multiplicar"
+        app:cornerRadius="5dp" />
+
+    <Button
+        android:id="@+id/btnDividir"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_row="2"
+        android:layout_column="4"
+        android:layout_gravity="center"
+        android:layout_margin="3dp"
+        android:text="@string/btn_dividir"
+        app:cornerRadius="5dp" />
+
+    <Button
+        android:id="@+id/btnRaizCuadrada"
+        android:layout_width="55dp"
+        android:layout_height="135dp"
+        android:layout_row="3"
+        android:layout_rowSpan="2"
+        android:layout_column="3"
+        android:layout_margin="3dp"
+        android:text="@string/btn_raiz_cuadrada"
+        android:textSize="3sp"
+        app:cornerRadius="5dp" />
+
+    <Button
+        android:id="@+id/btnInverso"
+        android:layout_width="55dp"
+        android:layout_height="135dp"
+        android:layout_row="3"
+        android:layout_rowSpan="2"
+        android:layout_column="4"
+        android:layout_margin="3dp"
+        android:text="@string/btn_inverso"
+        android:textSize="3sp"
+        app:cornerRadius="5dp" />
+
+</GridLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Mini Calculadora</string>
+    <string name="btn_uno">1</string>
+    <string name="btn_dos">2</string>
+    <string name="btn_tres">3</string>
+    <string name="btn_cuatro">4</string>
+    <string name="btn_cinco">5</string>
+    <string name="btn_seis">6</string>
+    <string name="btn_siete">7</string>
+    <string name="btn_ocho">8</string>
+    <string name="btn_nueve">9</string>
+    <string name="btn_cero">0</string>
+    <string name="btn_punto">.</string>
+    <string name="boton_conmutar">+-</string>
+    <string name="btn_sumar">+</string>
+    <string name="btn_restar">-</string>
+    <string name="btn_multiplicar">x</string>
+    <string name="btn_dividir">/</string>
+    <string name="btn_raiz_cuadrada">Root</string>
+    <string name="btn_inverso">Inv</string>
+    <string name="btn_igual">=</string>
+</resources>
