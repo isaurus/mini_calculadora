@@ -8,6 +8,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     // Declaración de Button para operaciones
     private Button btnSumar, btnRestar, btnMultiplicar, btnDividir, btnRoot, btnInverso, btnConmutar, btnIgual, btnBorrar;
 
+    // Declaración de List<> para almacenar los números que formarán parte de la operación
+    private List<String> listaNumeros;
+
     // Declaración de String para añadir a la cadena los números marcados
     private String cadenaResultado;
 
@@ -28,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Instancia de List<>
+        listaNumeros = new ArrayList<>();
 
         cadenaResultado = "";
 
@@ -66,16 +74,17 @@ public class MainActivity extends AppCompatActivity {
         btnConmutar = findViewById(R.id.btnConmutar);
 
         // Listener(s) de Button numéricos
-        btnUno.setOnClickListener(v -> addNumber(btnUno));
-        btnDos.setOnClickListener(v -> addNumber(btnDos));
-        btnTres.setOnClickListener(v -> addNumber(btnTres));
-        btnCuatro.setOnClickListener(v -> addNumber(btnCuatro));
-        btnCinco.setOnClickListener(v -> addNumber(btnCinco));
-        btnSeis.setOnClickListener(v -> addNumber(btnSeis));
-        btnSiete.setOnClickListener(v -> addNumber(btnSiete));
-        btnOcho.setOnClickListener(v -> addNumber(btnOcho));
-        btnNueve.setOnClickListener(v -> addNumber(btnNueve));
-        btnCero.setOnClickListener(v -> addNumber(btnCero));
+        btnUno.setOnClickListener(this::addNumberTest);
+        btnUno.setOnClickListener(this::addNumberTest);
+        btnDos.setOnClickListener(this::addNumberTest);
+        btnTres.setOnClickListener(this::addNumberTest);
+        btnCuatro.setOnClickListener(this::addNumberTest);
+        btnCinco.setOnClickListener(this::addNumberTest);
+        btnSeis.setOnClickListener(this::addNumberTest);
+        btnSiete.setOnClickListener(this::addNumberTest);
+        btnOcho.setOnClickListener(this::addNumberTest);
+        btnNueve.setOnClickListener(this::addNumberTest);
+        btnCero.setOnClickListener(this::addNumberTest);
 
         // Listener(s) de Button para operaciones
         btnSumar.setOnClickListener(v -> sumar());
@@ -90,6 +99,27 @@ public class MainActivity extends AppCompatActivity {
         btnBorrar.setOnClickListener(v -> borrarTodo());
 
     }
+
+    /**
+     * Método de prueba para:
+     *  - Añadir a la lista el valor (String) del Button pulsado
+     *  - Formatear el String para mostrarlo como si fuera un valor (¿mejorar función de formateo?)
+     *  - Imprimir en el TextView los valores marcados (¿hacer método a parte?)
+     *
+     * @param v La View que recibe en el Listener
+     */
+    protected void addNumberTest(View v){
+        Button btn = (Button) v;    // Parseamos la View v recibida por parámetro a un Button para usar sus métodos
+        listaNumeros.add(btn.getText().toString());
+        cadenaResultado += btn.getText().toString();
+        String cadenaFormateada = formatNumber(cadenaResultado);
+        txtResultado.setText(cadenaFormateada);
+    }
+
+    protected List<String> addNumberToList(String number){
+        listaNumeros.add(number);
+    }
+
 
     // Método para crear la cadena de números
     protected void addNumber(Button v){
