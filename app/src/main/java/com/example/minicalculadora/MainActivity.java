@@ -7,10 +7,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.text.NumberFormat;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,19 +22,16 @@ public class MainActivity extends AppCompatActivity {
     // Declaración de Button para operaciones
     private Button btnSumar, btnRestar, btnMultiplicar, btnDividir, btnRoot, btnInverso, btnConmutar, btnIgual, btnBorrar;
 
-    // Declaración de List<> para almacenar los números que formarán parte de la operación
-    private List<String> listaNumeros;
-
     // Declaración de String para añadir a la cadena los números marcados
     private String cadenaResultado;
+
+    // Declaración de Float para almacenar el resultado de las operaciones
+    private float result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        // Instancia de List<>
-        listaNumeros = new ArrayList<>();
 
         cadenaResultado = "";
 
@@ -87,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         btnCero.setOnClickListener(this::addNumberTest);
 
         // Listener(s) de Button para operaciones
-        btnSumar.setOnClickListener(v -> sumar());
+        /*btnSumar.setOnClickListener(v -> sumar());
         btnRestar.setOnClickListener(v -> restar());
         btnMultiplicar.setOnClickListener(v -> multiplicar());
         btnDividir.setOnClickListener(v -> dividir());
@@ -98,47 +94,54 @@ public class MainActivity extends AppCompatActivity {
         btnIgual.setOnClickListener(v -> calcularResultado());
         btnBorrar.setOnClickListener(v -> borrarTodo());
 
+         */
+
+
+        btnBorrar.setOnClickListener(v -> deleteAll());
     }
 
     /**
      * Método de prueba para:
      *  - Añadir a la lista el valor (String) del Button pulsado
-     *  - Formatear el String para mostrarlo como si fuera un valor (¿mejorar función de formateo?)
-     *  - Imprimir en el TextView los valores marcados (¿hacer método a parte?)
+     *  - Uso de formatNumberTest() para formatear el String para mostrarlo como si fuera un valor
+     *  - Imprimir en el TextView la cadena
      *
      * @param v La View que recibe en el Listener
      */
     protected void addNumberTest(View v){
-        Button btn = (Button) v;    // Parseamos la View v recibida por parámetro a un Button para usar sus métodos
-        listaNumeros.add(btn.getText().toString());
-        cadenaResultado += btn.getText().toString();
-        String cadenaFormateada = formatNumber(cadenaResultado);
-        txtResultado.setText(cadenaFormateada);
+        Button btn = (Button) v;
+        String btnValue = btn.getText().toString();
+
+        cadenaResultado += btnValue;
+        txtResultado.setText(formatNumberTest(cadenaResultado));
     }
 
-    protected List<String> addNumberToList(String number){
-        listaNumeros.add(number);
+    /**
+     * Método de prueba para:
+     *  - Formatea la cadena de texto para asemejarse a un valor numérico
+     *
+     * @param number La cadena a formatear
+     *
+     * @return La cadena formateada
+     */
+    protected String formatNumberTest(String number){
+        DecimalFormat decimalFormat = new DecimalFormat("#,###.##");
+
+        Float parsedValue = Float.parseFloat(number);
+        return decimalFormat.format(parsedValue);
     }
 
-
-    // Método para crear la cadena de números
-    protected void addNumber(Button v){
-        cadenaResultado += v.getText().toString();
-        String cadenaFormateada = formatNumber(cadenaResultado);
-        txtResultado.setText(cadenaFormateada);
+    /**
+     * Método de prueba para:
+     *  - Sumar los valores
+     */
+    protected void addTest(){
+        Float parsedValue = Float.parseFloat(cadenaResultado);
+        deleteAll();
     }
 
-    // Método para formatear la cadena de números
-    protected String formatNumber(String numero){
-        try {
-            long valorParseado = Long.parseLong(numero);
-            return NumberFormat.getInstance(Locale.ENGLISH).format(valorParseado);
-        } catch(NumberFormatException e){
-            return numero;
-        }
+    protected void deleteAll(){
+        cadenaResultado = "";
+        txtResultado.setText(cadenaResultado);
     }
-
-    // Método para sumar
-
-
 }
